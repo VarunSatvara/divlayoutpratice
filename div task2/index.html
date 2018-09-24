@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title> Title </title>
+    <style>
+        body,
+        html {
+            height: 100%;
+            width: :100%;
+            margin: 0;
+
+        }
+
+        .topleft {
+            height: 150px;
+            width: 150px;
+            position: absolute;
+            left: 0;
+            border: 1px solid green;
+            background-color: orangered;
+        }
+
+        .topright {
+            height: 150px;
+            width: 150px;
+            position: absolute;
+            right: 0;
+            border: 1px solid green;
+            background-color: orangered;
+
+        }
+
+        .bottomleft {
+            height: 150px;
+            width: 150px;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            border: 1px solid green;
+            background-color: orangered;
+
+        }
+
+        .bottomright {
+            height: 150px;
+            width: 150px;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            border: 1px solid green;
+            background-color: orangered;
+        }
+
+        .center {
+            height: 150px;
+            width: 150px;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            top: 0;
+            right: 0;
+            margin: auto;
+            border: 1px solid black;
+            border: 1px solid red;
+            background-color: khaki;
+        }
+
+        .center_child1 {
+            height: 20px;
+            width: 20px;
+            position: absolute;
+            border: 1px solid black;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            background-color: aqua;
+        }
+
+        .center_child2 {
+            height: 20px;
+            width: 20px;
+            position: absolute;
+            border: 1px solid black;
+            left: 127px;
+            right: 0;
+            bottom: 0;
+            top: 127px;
+            margin: auto;
+            background-color: cadetblue;
+
+        }
+
+        .center_child3 {
+            height: 20px;
+            width: 20px;
+            position: absolute;
+            border: 1px solid black;
+            left: 0;
+            right: 128px;
+            bottom: 0;
+            top: 127px;
+            margin: auto;
+            background-color: cornflowerblue;
+
+        }
+
+        .center_child4 {
+            height: 20px;
+            width: 20px;
+            position: absolute;
+            border: 1px solid black;
+            left: 0;
+            right: 128px;
+            bottom: 128px;
+            top: 0;
+            margin: auto;
+            background-color: darkcyan;
+
+        }
+
+        .center_child5 {
+            height: 20px;
+            width: 20px;
+            position: absolute;
+            border: 1px solid black;
+            left: 128px;
+            bottom: 128px;
+            top: 0;
+            right: 0;
+            margin: auto;
+            background-color: dodgerblue;
+        }
+
+        .center_parent1 {
+            height: 100px;
+            width: 100px;
+            position: absolute;
+            border: 2px solid red;
+            margin-right: auto;
+            left: 505px;
+            right: 0;
+            top: 153px;
+            bottom: 0;
+            background-color: yellow;
+        }
+
+
+        .center_parent2 {
+            height: 100px;
+            width: 100px;
+            position: absolute;
+            border: 2px solid red;
+            margin-right: auto;
+            left: 755px;
+            right: 0;
+            top: 153px;
+            bottom: 0;
+            background-color: cyan;
+        }
+
+        .center_parent3 {
+            height: 100px;
+            width: 100px;
+            position: absolute;
+            border: 2px solid red;
+            margin-left: auto;
+            left: 0;
+            right: 506px;
+            top: 405px;
+            bottom: 0;
+            background-color:salmon;
+        }
+
+        .center_parent4 {
+            height: 100px;
+            width: 100px;
+            position: absolute;
+            border: 2px solid red;
+            margin-right: auto;
+            left: 505px;
+            right: 0;
+            top: 403px;
+            bottom: 0;
+            background-color: palegreen;
+
+        }
+
+        .center_parent1ch1 {
+            height: 10px;
+            width: 10px;
+            border: 1px solid blue;
+            left: 506px;
+            right: 0;
+            top: 154px;
+            bottom: 0;
+            margin-right: auto;
+            position: absolute;
+            background-color: salmon;
+
+        }
+
+        .center_parent1ch2 {
+            height: 10px;
+            width: 10px;
+            border: 1px solid blue;
+            left: 597px;
+            right: 0;
+            top: 154px;
+            bottom: 0;
+            margin-right: auto;
+            position: absolute;
+            background-color: salmon;
+
+        }
+
+        .center_parent1ch3 {
+            height: 10px;
+            width: 10px;
+            border: 1px solid blue;
+            left: 506px;
+            right: 0;
+            top: 244px;
+            bottom: 0;
+            margin-right: auto;
+            position: absolute;
+            background-color: salmon;
+        }
+
+        .center_parent1ch4 {
+            height: 10px;
+            width: 10px;
+            border: 1px solid blue;
+            left: 597px;
+            right: 0;
+            top: 244px;
+            bottom: 0;
+            margin-right: auto;
+            position: absolute;
+            background-color: salmon;
+        }
+
+        .center_parent1ch5 {
+            height: 10px;
+            width: 10px;
+            margin-right: auto;
+            position: absolute;
+            left: 550px;
+            right: 0;
+            top: 200px;
+            bottom: 0;
+            border: 1px solid blue;
+            background-color: mediumseagreen;
+        }
+
+        .center_parent2ch1 {
+            height: 10px;
+            width: 10px;
+            border: 1px solid green;
+            left: 0;
+            right: 507px;
+            top: 153px;
+            bottom: 0;
+            margin-left: auto;
+            position: absolute;
+            background-color: blueviolet;
+        }
+
+        .center_parent2ch2 {
+            height: 10px;
+            width: 10px;
+            border: 1px solid green;
+            left: 0;
+            right: 507px;
+            top: 244px;
+            bottom: 0;
+            margin-left: auto;
+            position: absolute;
+            background-color: blueviolet;
+        }
+
+        .center_parent2ch3 {
+            height: 10px;
+            width: 10px;
+            border: 1px solid green;
+            left: 0;
+            right: 598px;
+            top: 244px;
+            bottom: 0;
+            margin-left: auto;
+            position: absolute;
+            background-color: blueviolet;
+        }
+
+        .center_parent2ch4 {
+            height: 10px;
+            width: 10px;
+            border: 1px solid green;
+            left: 0;
+            right: 598px;
+            top: 153px;
+            bottom: 0;
+            margin-left: auto;
+            position: absolute;
+            background-color: blueviolet;
+
+        }
+
+        .center_parent2ch5 {
+            height: 10px;
+            width: 10px;
+            border: 1px solid green;
+            left: 0;
+            right: 555px;
+            top: 200px;
+            bottom: 0;
+            margin-left: auto;
+            position: absolute;
+            background-color: orangered;
+
+        }
+
+        .center_parent3ch1 {
+            height: 10px;
+            width: 10px;
+            border: 1px solid darkcyan;
+            left: 0;
+            right: 506px;
+            top: 405px;
+            bottom: 0;
+            margin-left: auto;
+            position: absolute;
+            background-color: darkgreen;
+        }
+
+        .center_parent3ch2 {
+            height: 10px;
+            width: 10px;
+            border: 1px solid darkcyan;
+            left: 0;
+            right: 597px;
+            top: 406px;
+            bottom: 0;
+            margin-left: auto;
+            position: absolute;
+            background-color: darkgreen;
+        }
+
+        .center_parent3ch3 {
+            height: 10px;
+            width: 10px;
+            border: 1px solid darkcyan;
+            left: 0;
+            right: 597px;
+            top: 497px;
+            bottom: 0;
+            margin-left: auto;
+            position: absolute;
+            background-color: darkgreen;
+        }
+
+        .center_parent3ch4 {
+            height: 10px;
+            width: 10px;
+            border: 1px solid darkcyan;
+            left: 0;
+            right: 507px;
+            top: 496px;
+            bottom: 0;
+            margin-left: auto;
+            position: absolute;
+            background-color: darkgreen;
+        }
+
+        .center_parent3ch5 {
+            height: 10px;
+            width: 10px;
+            border: 1px solid darkcyan;
+            left: 0;
+            right: 550px;
+            top: 450px;
+            bottom: 0;
+            margin-left: auto;
+            position: absolute;
+            background-color: darkred;
+        }
+
+        .center_parent4ch1 {
+            height: 10px;
+            width: 10px;
+            border: 1px solid brown;
+            left: 506px;
+            right: 0;
+            top: 494px;
+            bottom: 0;
+            margin-right: auto;
+            position: absolute;
+            background-color: darkorange;
+
+        }
+
+        .center_parent4ch2 {
+            height: 10px;
+            width: 10px;
+            border: 1px solid brown;
+            left: 506px;
+            right: 0;
+            top: 404px;
+            bottom: 0;
+            margin-right: auto;
+            position: absolute;
+            background-color: darkorange;
+        }
+
+        .center_parent4ch3 {
+            height: 10px;
+            width: 10px;
+            border: 1px solid brown;
+            left: 596px;
+            right: 0;
+            top: 404px;
+            bottom: 0;
+            margin-right: auto;
+            position: absolute;
+            background-color: darkorange;
+        }
+
+        .center_parent4ch4 {
+            height: 10px;
+            width: 10px;
+            border: 1px solid brown;
+            left: 596px;
+            right: 0;
+            top: 494px;
+            bottom: 0;
+            margin-right: auto;
+            position: absolute;
+            background-color: darkorange;
+        }
+
+        .center_parent4ch5 {
+            height: 10px;
+            width: 10px;
+            border: 1px solid brown;
+            left: 553px;
+            right: 0;
+            top: 450px;
+            bottom: 0;
+            margin-right: auto;
+            position: absolute;
+            background-color: rebeccapurple;
+        }
+    </style>
+</head>
+
+<body bgcolor="skyblue">
+    <div class="topleft"></div>
+    <div class="topright"></div>
+    <div class="bottomleft"></div>
+    <div class="bottomright"></div>
+    <div class="center"></div>
+    <div class="center_parent1"></div>
+    <div class="center_parent1ch1"></div>
+    <div class="center_parent1ch2"></div>
+    <div class="center_parent1ch3"></div>
+    <div class="center_parent1ch4"></div>
+    <div class="center_parent1ch5"></div>
+    <div class="center_parentch5"></div>
+    <div class="center_parent2"></div>
+    <div class="center_parent2ch1"></div>
+    <div class="center_parent2ch2"></div>
+    <div class="center_parent2ch3"></div>
+    <div class="center_parent2ch4"></div>
+    <div class="center_parent2ch5"></div>
+    <div class="center_parent3"></div>
+    <div class="center_parent3ch1"></div>
+    <div class="center_parent3ch2"></div>
+    <div class="center_parent3ch3"></div>
+    <div class="center_parent3ch4"></div>
+    <div class="center_parent3ch5"></div>
+    <div class="center_parent4"></div>
+    <div class="center_parent4ch1"></div>
+    <div class="center_parent4ch2"></div>
+    <div class="center_parent4ch3"></div>
+    <div class="center_parent4ch4"></div>
+    <div class="center_parent4ch5"></div>
+    <div class="center_child1"></div>
+    <div class="center_child2"></div>
+    <div class="center_child3"></div>
+    <div class="center_child4"></div>
+    <div class="center_child5"></div>
+ 
+
+
+</body>
+
+</html>
